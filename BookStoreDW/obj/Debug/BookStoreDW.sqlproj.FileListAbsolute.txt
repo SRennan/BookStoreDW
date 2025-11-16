@@ -1,0 +1,10 @@
+C:\Users\Renan\Documents\Modulo_5\Final\BookStoreDW\BookStoreDW\bin\Debug\BookStoreDW.dacpac
+C:\Users\Renan\Documents\Modulo_5\Final\BookStoreDW\BookStoreDW\bin\Debug\BookStoreDW.dll
+C:\Users\Renan\Documents\Modulo_5\Final\BookStoreDW\BookStoreDW\bin\Debug\BookStoreDW.pdb
+C:\Users\Renan\Documents\Modulo_5\Final\BookStoreDW\BookStoreDW\obj\Debug\BookStoreDW.sqlproj.AssemblyReference.cache
+C:\Users\Renan\Documents\Modulo_5\Final\BookStoreDW\BookStoreDW\obj\Debug\Model.xml
+C:\Users\Renan\Documents\Modulo_5\Final\BookStoreDW\BookStoreDW\obj\Debug\refactor.xml
+C:\Users\Renan\Documents\Modulo_5\Final\BookStoreDW\BookStoreDW\obj\Debug\postdeploy.sql
+C:\Users\Renan\Documents\Modulo_5\Final\BookStoreDW\BookStoreDW\obj\Debug\predeploy.sql
+C:\Users\Renan\Documents\Modulo_5\Final\BookStoreDW\BookStoreDW\obj\Debug\BookStoreDW.dll
+C:\Users\Renan\Documents\Modulo_5\Final\BookStoreDW\BookStoreDW\obj\Debug\BookStoreDW.pdb
