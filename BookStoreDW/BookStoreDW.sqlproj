@@ -57,14 +57,45 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Schema" />
-    <Folder Include="Schema\Table" />
+    <Folder Include="Schema\Tables" />
+    <Folder Include="Scripts" />
+    <Folder Include="Schema\Security" />
+    <Folder Include="Schema\Programmability" />
+    <Folder Include="Schema\Programmability\Stored Procedures" />
+    <Folder Include="Schema\Tables\dbo" />
+    <Folder Include="Schema\Tables\staging" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Schema\Table\DimAddress.sql" />
-    <Build Include="Schema\Table\DimBook.sql" />
-    <Build Include="Schema\Table\DimCustomer.sql" />
-    <Build Include="Schema\Table\DimDate.sql" />
-    <Build Include="Schema\Table\DimShippingMethod.sql" />
-    <Build Include="Schema\Table\FactOrders.sql" />
+    <Build Include="Schema\Security\staging.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimCustomer.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\GetLastPackageRowVersion.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\UpdateLastPackageRowVersion.sql" />
+    <Build Include="Schema\Tables\dbo\DimAddress.sql" />
+    <Build Include="Schema\Tables\dbo\DimBook.sql" />
+    <Build Include="Schema\Tables\dbo\DimCustomer.sql" />
+    <Build Include="Schema\Tables\dbo\DimDate.sql" />
+    <Build Include="Schema\Tables\dbo\DimShippingMethod.sql" />
+    <Build Include="Schema\Tables\dbo\FactOrders.sql" />
+    <Build Include="Schema\Tables\staging\staging.customer.sql" />
+    <Build Include="Schema\Tables\staging\staging.address.sql" />
+    <Build Include="Schema\Tables\staging\staging.book.sql" />
+    <Build Include="Schema\Tables\staging\staging.shippingMethod.sql" />
+    <Build Include="Schema\Tables\dbo\PackageConfig.sql" />
+    <Build Include="Schema\Tables\staging\staging.orders.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimBook.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimAddress.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimShippingMethod.sql" />
+    <Build Include="Schema\Tables\dbo\DimStatus.sql" />
+    <Build Include="Schema\Tables\staging\staging.status.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimStatus.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeFactOrders.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\PackageConfig.data.sql" />
+    <None Include="Scripts\PatchDimDate.data.sql" />
+    <None Include="Scripts\DimDate.data.sql" />
   </ItemGroup>
 </Project>
