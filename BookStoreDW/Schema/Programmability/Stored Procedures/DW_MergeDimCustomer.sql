@@ -10,7 +10,7 @@ BEGIN
 	   ,[street_number]	= sc.[street_number]
 	   ,[city]			= sc.[city]
 	   ,[address_status]= sc.[address_status]
-	   ,[country_id]	= sc.[country_id]
+	   ,[country_name]	= sc.[country_name]
 	FROM [dbo].[DimCustomer]        dc
 	INNER JOIN [staging].[customer] sc ON (dc.[CustomerSK]=sc.[CustomerSK])
 END

@@ -3,24 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8CE414BB-95B2-4C99-9E03-51BA72086E22}|BookStoreOLAP\\BookStoreOLAP.smproj|C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreOLAP\\Model.bim||{9EE154FA-5389-414A-9FA1-1D9F0221267D}",
+      "RelativeMoniker": "D:0:0:{8CE414BB-95B2-4C99-9E03-51BA72086E22}|BookStoreOLAP\\BookStoreOLAP.smproj|solutionrelative:BookStoreOLAP\\Model.bim||{9EE154FA-5389-414A-9FA1-1D9F0221267D}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0AB03494-4379-A9CB-FB32-4D95AA02BFE4}|BookStoreETL\\BookStoreETL.dtproj|C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\FacOrder.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
       "RelativeMoniker": "D:0:0:{0AB03494-4379-A9CB-FB32-4D95AA02BFE4}|BookStoreETL\\BookStoreETL.dtproj|solutionrelative:BookStoreETL\\FacOrder.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AB03494-4379-A9CB-FB32-4D95AA02BFE4}|BookStoreETL\\BookStoreETL.dtproj|C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimStatus.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{0AB03494-4379-A9CB-FB32-4D95AA02BFE4}|BookStoreETL\\BookStoreETL.dtproj|solutionrelative:BookStoreETL\\DimStatus.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AB03494-4379-A9CB-FB32-4D95AA02BFE4}|BookStoreETL\\BookStoreETL.dtproj|C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimShippingMethod.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
       "RelativeMoniker": "D:0:0:{0AB03494-4379-A9CB-FB32-4D95AA02BFE4}|BookStoreETL\\BookStoreETL.dtproj|solutionrelative:BookStoreETL\\DimShippingMethod.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AB03494-4379-A9CB-FB32-4D95AA02BFE4}|BookStoreETL\\BookStoreETL.dtproj|C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimAddress.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{0AB03494-4379-A9CB-FB32-4D95AA02BFE4}|BookStoreETL\\BookStoreETL.dtproj|solutionrelative:BookStoreETL\\DimAddress.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+      "AbsoluteMoniker": "D:0:0:{0AB03494-4379-A9CB-FB32-4D95AA02BFE4}|BookStoreETL\\BookStoreETL.dtproj|C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimCustomer.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{0AB03494-4379-A9CB-FB32-4D95AA02BFE4}|BookStoreETL\\BookStoreETL.dtproj|solutionrelative:BookStoreETL\\DimCustomer.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AB03494-4379-A9CB-FB32-4D95AA02BFE4}|BookStoreETL\\BookStoreETL.dtproj|C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimBook.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
       "RelativeMoniker": "D:0:0:{0AB03494-4379-A9CB-FB32-4D95AA02BFE4}|BookStoreETL\\BookStoreETL.dtproj|solutionrelative:BookStoreETL\\DimBook.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AB03494-4379-A9CB-FB32-4D95AA02BFE4}|BookStoreETL\\BookStoreETL.dtproj|C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimCustomer.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{0AB03494-4379-A9CB-FB32-4D95AA02BFE4}|BookStoreETL\\BookStoreETL.dtproj|solutionrelative:BookStoreETL\\DimCustomer.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+      "AbsoluteMoniker": "D:0:0:{0AB03494-4379-A9CB-FB32-4D95AA02BFE4}|BookStoreETL\\BookStoreETL.dtproj|C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimAuthor.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{0AB03494-4379-A9CB-FB32-4D95AA02BFE4}|BookStoreETL\\BookStoreETL.dtproj|solutionrelative:BookStoreETL\\DimAuthor.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AB03494-4379-A9CB-FB32-4D95AA02BFE4}|BookStoreETL\\BookStoreETL.dtproj|C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimAddress.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{0AB03494-4379-A9CB-FB32-4D95AA02BFE4}|BookStoreETL\\BookStoreETL.dtproj|solutionrelative:BookStoreETL\\DimAddress.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4821A40-E299-44B5-947D-CFCEC9E0DDA1}|BookstoreOLTP\\BookstoreOLTP.sqlproj|C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookstoreOLTP\\Schema\\Programmability\\Stored Procedures\\GetStateChangesByRowVersion.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{F4821A40-E299-44B5-947D-CFCEC9E0DDA1}|BookstoreOLTP\\BookstoreOLTP.sqlproj|solutionrelative:BookstoreOLTP\\Schema\\Programmability\\Stored Procedures\\GetStateChangesByRowVersion.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4821A40-E299-44B5-947D-CFCEC9E0DDA1}|BookstoreOLTP\\BookstoreOLTP.sqlproj|C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookstoreOLTP\\Schema\\Programmability\\Stored Procedures\\GetShippingMethodChangesByRowVersion.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{F4821A40-E299-44B5-947D-CFCEC9E0DDA1}|BookstoreOLTP\\BookstoreOLTP.sqlproj|solutionrelative:BookstoreOLTP\\Schema\\Programmability\\Stored Procedures\\GetShippingMethodChangesByRowVersion.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4821A40-E299-44B5-947D-CFCEC9E0DDA1}|BookstoreOLTP\\BookstoreOLTP.sqlproj|C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookstoreOLTP\\Schema\\Programmability\\Stored Procedures\\GetShippingMethodChangesByRowVersion.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{F4821A40-E299-44B5-947D-CFCEC9E0DDA1}|BookstoreOLTP\\BookstoreOLTP.sqlproj|solutionrelative:BookstoreOLTP\\Schema\\Programmability\\Stored Procedures\\GetShippingMethodChangesByRowVersion.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4821A40-E299-44B5-947D-CFCEC9E0DDA1}|BookstoreOLTP\\BookstoreOLTP.sqlproj|C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookstoreOLTP\\Schema\\Programmability\\Stored Procedures\\GetStateChangesByRowVersion.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{F4821A40-E299-44B5-947D-CFCEC9E0DDA1}|BookstoreOLTP\\BookstoreOLTP.sqlproj|solutionrelative:BookstoreOLTP\\Schema\\Programmability\\Stored Procedures\\GetStateChangesByRowVersion.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,25 +63,49 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FacOrder.dtsx [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\FacOrder.dtsx",
-              "RelativeDocumentMoniker": "BookStoreETL\\FacOrder.dtsx",
-              "ToolTip": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\FacOrder.dtsx [Dise\u00F1o]*",
-              "RelativeToolTip": "BookStoreETL\\FacOrder.dtsx [Dise\u00F1o]*",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-11-23T23:11:24.92Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "Title": "Model.bim",
+              "DocumentMoniker": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreOLAP\\Model.bim",
+              "RelativeDocumentMoniker": "BookStoreOLAP\\Model.bim",
+              "ToolTip": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreOLAP\\Model.bim",
+              "RelativeToolTip": "BookStoreOLAP\\Model.bim",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-30T22:33:43.705Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "FacOrder.dtsx [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\FacOrder.dtsx",
+              "RelativeDocumentMoniker": "BookStoreETL\\FacOrder.dtsx",
+              "ToolTip": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\FacOrder.dtsx [Dise\u00F1o]",
+              "RelativeToolTip": "BookStoreETL\\FacOrder.dtsx [Dise\u00F1o]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-11-30T22:33:16.154Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DimStatus.dtsx [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimStatus.dtsx",
+              "RelativeDocumentMoniker": "BookStoreETL\\DimStatus.dtsx",
+              "ToolTip": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimStatus.dtsx [Dise\u00F1o]",
+              "RelativeToolTip": "BookStoreETL\\DimStatus.dtsx [Dise\u00F1o]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-11-30T22:33:02.402Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "DimShippingMethod.dtsx [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimShippingMethod.dtsx",
               "RelativeDocumentMoniker": "BookStoreETL\\DimShippingMethod.dtsx",
               "ToolTip": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimShippingMethod.dtsx [Dise\u00F1o]",
               "RelativeToolTip": "BookStoreETL\\DimShippingMethod.dtsx [Dise\u00F1o]",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-11-23T22:15:01.876Z",
+              "WhenOpened": "2025-11-30T22:32:55.227Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
@@ -65,32 +117,66 @@
               "ToolTip": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimCustomer.dtsx [Dise\u00F1o]",
               "RelativeToolTip": "BookStoreETL\\DimCustomer.dtsx [Dise\u00F1o]",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-11-23T22:14:58.22Z",
+              "WhenOpened": "2025-11-30T22:32:49.375Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "DimBook.dtsx [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimBook.dtsx",
               "RelativeDocumentMoniker": "BookStoreETL\\DimBook.dtsx",
               "ToolTip": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimBook.dtsx [Dise\u00F1o]",
               "RelativeToolTip": "BookStoreETL\\DimBook.dtsx [Dise\u00F1o]",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-11-23T22:14:53.032Z",
+              "WhenOpened": "2025-11-30T22:32:42.467Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
+              "Title": "DimAuthor.dtsx [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimAuthor.dtsx",
+              "RelativeDocumentMoniker": "BookStoreETL\\DimAuthor.dtsx",
+              "ToolTip": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimAuthor.dtsx [Dise\u00F1o]",
+              "RelativeToolTip": "BookStoreETL\\DimAuthor.dtsx [Dise\u00F1o]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-11-30T22:32:33.924Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "DimAddress.dtsx [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimAddress.dtsx",
               "RelativeDocumentMoniker": "BookStoreETL\\DimAddress.dtsx",
               "ToolTip": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookStoreETL\\DimAddress.dtsx [Dise\u00F1o]",
               "RelativeToolTip": "BookStoreETL\\DimAddress.dtsx [Dise\u00F1o]",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFkSURBVDhPjVO/S8NAGH2RtvSPaPeSwUVchS6CexYRJCBYUJC6SEFBBIXiIigKEYRSCC4unQTXDsVipkpbUJHSRTQ2/oimNCTnkOTMXdrqg4Pv\u002B\u002B69ly933wkAoFaqBGPQezdx9/CYO9xZOWU2CPF0aqVKXMcZuY7Kl2R6bomsbZ8sMwYAJvjCKOxtraNW1xTe5N8Gm7sHAIBaXVPC9Vg4KZSaNC7KIs0/jQQW5yUAQPn8gnIwrAM7nYGdzjB5cnIGqwuzDC9AxCDebSPebUdyc8DQWPx1Cx\u002BWQzrG722EtZEOeJgDwOgDukUQSyT5bdagUGrSBU6sW4A7ZNwiHQSHGBa/fANvFuDafZ4eNQgOLSx\u002B/gK06xa6dgpZKY\u002BNswbBlELAz0FRFumXjT7Bq\u002BXFpu31XpRFdJ5M3N73sO9rqMGxehWEI5Ci4puWTqsx\u002BK\u002BNnzAeWSlPxWEDgWGNg//PDLSc8AOMxO8cPcnGpQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-11-23T21:45:58.404Z",
+              "WhenOpened": "2025-11-30T22:32:01.231Z",
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GetStateChangesByRowVersion.sql ",
+              "DocumentMoniker": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookstoreOLTP\\Schema\\Programmability\\Stored Procedures\\GetStateChangesByRowVersion.sql",
+              "RelativeDocumentMoniker": "BookstoreOLTP\\Schema\\Programmability\\Stored Procedures\\GetStateChangesByRowVersion.sql",
+              "ToolTip": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookstoreOLTP\\Schema\\Programmability\\Stored Procedures\\GetStateChangesByRowVersion.sql\r\n(localdb)\\ProjectModels.BookstoreOLTP_1\r\n(RENAN-LAPTOP\\Renan)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-11-30T22:29:43.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GetShippingMethodChangesByRowVersion.sql ",
+              "DocumentMoniker": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookstoreOLTP\\Schema\\Programmability\\Stored Procedures\\GetShippingMethodChangesByRowVersion.sql",
+              "RelativeDocumentMoniker": "BookstoreOLTP\\Schema\\Programmability\\Stored Procedures\\GetShippingMethodChangesByRowVersion.sql",
+              "ToolTip": "C:\\Users\\Renan\\Documents\\Modulo_5\\Final\\BookStoreDW\\BookstoreOLTP\\Schema\\Programmability\\Stored Procedures\\GetShippingMethodChangesByRowVersion.sql\r\n(localdb)\\ProjectModels.BookstoreOLTP_1\r\n(RENAN-LAPTOP\\Renan)",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-11-30T22:28:51.597Z",
+              "EditorCaption": ""
             }
           ]
         }

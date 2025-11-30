@@ -1,21 +1,14 @@
-﻿CREATE TABLE [staging].[orders]
-(
-	
-	order_id			INT NOT NULL,
-
-    AddressSK           INT NULL, 
-	BookSK              INT NULL,
-	CustomerSK          INT NULL,
-	MethodSK            INT NULL,      
-	StatusSK			INT NULL,
-		
-	Order_dateKey		INT NOT NULL,
-	Status_dateKey		INT NOT NULL,
-
-	order_date			datetime NULL,
-	status_date			datetime NULL,
-
-	
-	quantity            INT NOT NULL DEFAULT(1),
-	price               DECIMAL(5,2) NOT NULL
+﻿CREATE TABLE [staging].[orders](
+	[order_id] [int] NOT NULL,
+	[AddressSK] [int] NULL,
+	[BookSK] [int] NULL,
+	[CustomerSK] [int] NULL,
+	[MethodSK] [int] NULL,
+	[Order_dateKey] [int] NOT NULL,
+	[order_date] [datetime] NULL,
+	[quantity] [int] NOT NULL,
+	[price] [decimal](5, 2) NOT NULL,
+	[StatusSK] [int] NULL,
+	[method_name] [varchar](100) NULL,
+	[cost] [decimal](6, 2) NULL
 )

@@ -64,6 +64,7 @@
     <Folder Include="Schema\Programmability\Stored Procedures" />
     <Folder Include="Schema\Tables\dbo" />
     <Folder Include="Schema\Tables\staging" />
+    <Folder Include="Schema\Tables\bridge" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Schema\Security\staging.sql" />
@@ -89,6 +90,10 @@
     <Build Include="Schema\Tables\staging\staging.status.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimStatus.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\DW_MergeFactOrders.sql" />
+    <Build Include="Schema\Tables\dbo\DimAuthor.sql" />
+    <Build Include="Schema\Tables\bridge\BookAuthor.sql" />
+    <Build Include="Schema\Tables\staging\staging.author.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimAuthor.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />

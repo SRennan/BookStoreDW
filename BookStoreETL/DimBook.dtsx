@@ -11,8 +11,8 @@
   DTS:LocaleID="2058"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{F463D5C5-0C47-44CC-A679-EC00E3F8944C}">
+  DTS:VersionBuild="35"
+  DTS:VersionGUID="{6549F542-A345-4B17-8BFC-C45AB9E68A70}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -186,7 +186,7 @@ where [refTable].[book_id] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="BookSK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="book_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="title" dataType="DT_STR" length="400" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="isbn13" dataType="DT_STR" length="13" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="language_code" dataType="DT_STR" length="8" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="language_name" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="num_pages" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="publication_date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="publisher_name" dataType="DT_STR" length="400" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="author_name" dataType="DT_STR" length="400" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="BookSK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="book_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="title" dataType="DT_STR" length="400" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="isbn13" dataType="DT_STR" length="13" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="language_code" dataType="DT_STR" length="8" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="language_name" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="num_pages" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="publication_date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="publisher_name" dataType="DT_STR" length="400" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -421,14 +421,6 @@ where [refTable].[book_id] = ?</property>
                       cachedName="publisher_name"
                       externalMetadataColumnId="Package\Load Book\New Book.Inputs[OLE DB Destination Input].ExternalColumns[publisher_name]"
                       lineageId="Package\Load Book\OLE DB Source.Outputs[OLE DB Source Output].Columns[publisher_name]" />
-                    <inputColumn
-                      refId="Package\Load Book\New Book.Inputs[OLE DB Destination Input].Columns[author_name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="400"
-                      cachedName="author_name"
-                      externalMetadataColumnId="Package\Load Book\New Book.Inputs[OLE DB Destination Input].ExternalColumns[author_name]"
-                      lineageId="Package\Load Book\OLE DB Source.Outputs[OLE DB Source Output].Columns[author_name]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -478,12 +470,6 @@ where [refTable].[book_id] = ?</property>
                       dataType="str"
                       length="400"
                       name="publisher_name" />
-                    <externalMetadataColumn
-                      refId="Package\Load Book\New Book.Inputs[OLE DB Destination Input].ExternalColumns[author_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="400"
-                      name="author_name" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -655,17 +641,6 @@ where [refTable].[book_id] = ?</property>
                       lineageId="Package\Load Book\OLE DB Source.Outputs[OLE DB Source Output].Columns[publisher_name]"
                       name="publisher_name"
                       truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Load Book\OLE DB Source.Outputs[OLE DB Source Output].Columns[author_name]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load Book\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[author_name]"
-                      length="400"
-                      lineageId="Package\Load Book\OLE DB Source.Outputs[OLE DB Source Output].Columns[author_name]"
-                      name="author_name"
-                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -711,12 +686,6 @@ where [refTable].[book_id] = ?</property>
                       dataType="str"
                       length="400"
                       name="publisher_name" />
-                    <externalMetadataColumn
-                      refId="Package\Load Book\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[author_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="400"
-                      name="author_name" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -774,13 +743,6 @@ where [refTable].[book_id] = ?</property>
                       length="400"
                       lineageId="Package\Load Book\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[publisher_name]"
                       name="publisher_name" />
-                    <outputColumn
-                      refId="Package\Load Book\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[author_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="400"
-                      lineageId="Package\Load Book\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[author_name]"
-                      name="author_name" />
                     <outputColumn
                       refId="Package\Load Book\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -923,14 +885,6 @@ where [refTable].[book_id] = ?</property>
                       externalMetadataColumnId="Package\Load Book\Update Book.Inputs[OLE DB Destination Input].ExternalColumns[publisher_name]"
                       lineageId="Package\Load Book\OLE DB Source.Outputs[OLE DB Source Output].Columns[publisher_name]" />
                     <inputColumn
-                      refId="Package\Load Book\Update Book.Inputs[OLE DB Destination Input].Columns[author_name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="400"
-                      cachedName="author_name"
-                      externalMetadataColumnId="Package\Load Book\Update Book.Inputs[OLE DB Destination Input].ExternalColumns[author_name]"
-                      lineageId="Package\Load Book\OLE DB Source.Outputs[OLE DB Source Output].Columns[author_name]" />
-                    <inputColumn
                       refId="Package\Load Book\Update Book.Inputs[OLE DB Destination Input].Columns[BookSK]"
                       cachedDataType="i4"
                       cachedName="BookSK"
@@ -981,12 +935,6 @@ where [refTable].[book_id] = ?</property>
                       dataType="str"
                       length="400"
                       name="publisher_name" />
-                    <externalMetadataColumn
-                      refId="Package\Load Book\Update Book.Inputs[OLE DB Destination Input].ExternalColumns[author_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="400"
-                      name="author_name" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1142,6 +1090,18 @@ where [refTable].[book_id] = ?</property>
           Size="145,42"
           Id="Package\Get Last Row"
           TopLeft="403,203" />
+        <NodeLayout
+          Size="131,42"
+          Id="Package\Load Book"
+          TopLeft="413,354" />
+        <NodeLayout
+          Size="131,42"
+          Id="Package\Sync Book"
+          TopLeft="420,436" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Update Config"
+          TopLeft="412,513" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
           TopLeft="477.5,168">
@@ -1186,10 +1146,6 @@ where [refTable].[book_id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="131,42"
-          Id="Package\Load Book"
-          TopLeft="413,354" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 2]"
           TopLeft="478.25,323">
@@ -1212,10 +1168,6 @@ where [refTable].[book_id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="131,42"
-          Id="Package\Sync Book"
-          TopLeft="420,436" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 3]"
           TopLeft="482,396">
@@ -1238,10 +1190,6 @@ where [refTable].[book_id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="149,42"
-          Id="Package\Update Config"
-          TopLeft="412,513" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 4]"
           TopLeft="486,478">
@@ -1273,13 +1221,43 @@ where [refTable].[book_id] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="129,42"
+          Id="Package\Load Book\New Book"
+          TopLeft="135,321" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Load Book\OLE DB Source"
+          TopLeft="228,90" />
+        <NodeLayout
           Size="115,42"
           Id="Package\Load Book\Lookup"
           TopLeft="255,208" />
         <NodeLayout
-          Size="129,42"
-          Id="Package\Load Book\New Book"
-          TopLeft="135,321" />
+          Size="142,42"
+          Id="Package\Load Book\Update Book"
+          TopLeft="352,318" />
+        <EdgeLayout
+          Id="Package\Load Book.Paths[OLE DB Source Output]"
+          TopLeft="309.5,132">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,76"
+              Start="0,0"
+              End="0,68.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Load Book.Paths[Lookup No Match Output]"
           TopLeft="294.666666666667,250">
@@ -1316,10 +1294,6 @@ where [refTable].[book_id] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="142,42"
-          Id="Package\Load Book\Update Book"
-          TopLeft="352,318" />
         <EdgeLayout
           Id="Package\Load Book.Paths[Lookup Match Output]"
           TopLeft="330.333333333333,250">
@@ -1352,77 +1326,15 @@ where [refTable].[book_id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-1.85805338541666,32.7598627787307,96.3827734375,11.609375"
+              BoundingBox="-1.85805338541665,32.7598627787307,96.3827734375,11.609375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="157,42"
-          Id="Package\Load Book\OLE DB Source"
-          TopLeft="228,90" />
-        <EdgeLayout
-          Id="Package\Load Book.Paths[OLE DB Source Output]"
-          TopLeft="309.5,132">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,76"
-              Start="0,0"
-              End="0,68.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,68.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Book\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimBook]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Load Book\New Book">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load Book\Update Book">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1439,6 +1351,42 @@ where [refTable].[book_id] = ?</property>
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Book\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimBook]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Book\Update Book">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

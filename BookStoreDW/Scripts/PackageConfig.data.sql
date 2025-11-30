@@ -1,8 +1,16 @@
-﻿IF NOT EXISTS(SELECT TOP(1) 1
+﻿
+IF NOT EXISTS(SELECT TOP(1) 1
               FROM [dbo].[PackageConfig]
 			  WHERE [TableName] = 'Address')
  BEGIN
 	INSERT [dbo].[PackageConfig] ([TableName], [LastRowVersion]) VALUES ('Address', 0)
+ END
+GO
+IF NOT EXISTS(SELECT TOP(1) 1
+              FROM [dbo].[PackageConfig]
+			  WHERE [TableName] = 'Author')
+ BEGIN
+	INSERT [dbo].[PackageConfig] ([TableName], [LastRowVersion]) VALUES ('Author', 0)
  END
 GO
 IF NOT EXISTS(SELECT TOP(1) 1
@@ -24,6 +32,14 @@ IF NOT EXISTS(SELECT TOP(1) 1
 			  WHERE [TableName] = 'ShippingMethod')
  BEGIN
 	INSERT [dbo].[PackageConfig] ([TableName], [LastRowVersion]) VALUES ('ShippingMethod', 0)
+ END
+GO
+
+IF NOT EXISTS(SELECT TOP(1) 1
+              FROM [dbo].[PackageConfig]
+			  WHERE [TableName] = 'State')
+ BEGIN
+	INSERT [dbo].[PackageConfig] ([TableName], [LastRowVersion]) VALUES ('State', 0)
  END
 GO
 IF NOT EXISTS(SELECT TOP(1) 1

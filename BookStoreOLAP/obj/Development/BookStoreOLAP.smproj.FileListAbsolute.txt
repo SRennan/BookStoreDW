@@ -1,0 +1,8 @@
+C:\Users\Renan\Documents\Modulo_5\Final\BookStoreDW\BookStoreOLAP\bin\Model.asdatabase
+C:\Users\Renan\Documents\Modulo_5\Final\BookStoreDW\BookStoreOLAP\bin\Model.deploymenttargets
+C:\Users\Renan\Documents\Modulo_5\Final\BookStoreDW\BookStoreOLAP\bin\Model.deploymentoptions
+C:\Users\Renan\Documents\Modulo_5\Final\BookStoreDW\BookStoreOLAP\obj\Development\BookStoreOLAP.smproj.AssemblyReference.cache
+C:\Users\Renan\Documents\Modulo_5\Final\BookStoreDW\BookStoreOLAP\obj\Development\BookStoreOLAP.smproj.CoreCompileInputs.cache
+C:\Users\Renan\Documents\Modulo_5\Final\BookStoreDW\BookStoreOLAP\obj\Development\Model.asdatabase
+C:\Users\Renan\Documents\Modulo_5\Final\BookStoreDW\BookStoreOLAP\obj\Development\Model.deploymentoptions
+C:\Users\Renan\Documents\Modulo_5\Final\BookStoreDW\BookStoreOLAP\obj\Development\Model.deploymenttargets

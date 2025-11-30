@@ -11,8 +11,8 @@
   DTS:LocaleID="2058"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{27DC3E05-387D-42D3-84FF-AC1FCCEE203D}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{AB22B5A6-C6A1-4625-A5D0-D66DF869D786}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -425,6 +425,14 @@ where [refTable].[customer_id] = ?</property>
                       cachedName="address_status"
                       externalMetadataColumnId="Package\Load Customer\New Customer.Inputs[OLE DB Destination Input].ExternalColumns[address_status]"
                       lineageId="Package\Load Customer\OLE DB Source.Outputs[OLE DB Source Output].Columns[address_status]" />
+                    <inputColumn
+                      refId="Package\Load Customer\New Customer.Inputs[OLE DB Destination Input].Columns[country_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="country_name"
+                      externalMetadataColumnId="Package\Load Customer\New Customer.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
+                      lineageId="Package\Load Customer\OLE DB Source.Outputs[OLE DB Source Output].Columns[country_name]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -478,6 +486,12 @@ where [refTable].[customer_id] = ?</property>
                       dataType="str"
                       length="30"
                       name="address_status" />
+                    <externalMetadataColumn
+                      refId="Package\Load Customer\New Customer.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="country_name" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -938,6 +952,14 @@ where [refTable].[customer_id] = ?</property>
                       cachedName="CustomerSK"
                       externalMetadataColumnId="Package\Load Customer\Update Customer.Inputs[OLE DB Destination Input].ExternalColumns[CustomerSK]"
                       lineageId="Package\Load Customer\Lookup.Outputs[Lookup Match Output].Columns[CustomerSK]" />
+                    <inputColumn
+                      refId="Package\Load Customer\Update Customer.Inputs[OLE DB Destination Input].Columns[country_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="country_name"
+                      externalMetadataColumnId="Package\Load Customer\Update Customer.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
+                      lineageId="Package\Load Customer\OLE DB Source.Outputs[OLE DB Source Output].Columns[country_name]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -988,9 +1010,9 @@ where [refTable].[customer_id] = ?</property>
                       length="30"
                       name="address_status" />
                     <externalMetadataColumn
-                      refId="Package\Load Customer\Update Customer.Inputs[OLE DB Destination Input].ExternalColumns[country_id]"
+                      refId="Package\Load Customer\Update Customer.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
                       dataType="i4"
-                      name="country_id" />
+                      name="country_name" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1277,13 +1299,21 @@ where [refTable].[customer_id] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="115,42"
-          Id="Package\Load Customer\Lookup"
-          TopLeft="255,208" />
+          Size="152,42"
+          Id="Package\Load Customer\New Customer"
+          TopLeft="125,309" />
         <NodeLayout
           Size="157,42"
           Id="Package\Load Customer\OLE DB Source"
           TopLeft="238,95" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Load Customer\Update Customer"
+          TopLeft="363,308" />
+        <NodeLayout
+          Size="115,42"
+          Id="Package\Load Customer\Lookup"
+          TopLeft="255,208" />
         <EdgeLayout
           Id="Package\Load Customer.Paths[OLE DB Source Output]"
           TopLeft="314.5,137">
@@ -1306,10 +1336,6 @@ where [refTable].[customer_id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="152,42"
-          Id="Package\Load Customer\New Customer"
-          TopLeft="125,309" />
         <EdgeLayout
           Id="Package\Load Customer.Paths[Lookup No Match Output]"
           TopLeft="294.666666666667,250">
@@ -1346,10 +1372,6 @@ where [refTable].[customer_id] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="165,42"
-          Id="Package\Load Customer\Update Customer"
-          TopLeft="363,308" />
         <EdgeLayout
           Id="Package\Load Customer.Paths[Lookup Match Output]"
           TopLeft="330.333333333333,250">
@@ -1390,37 +1412,6 @@ where [refTable].[customer_id] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load Customer\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimCustomer]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load Customer\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Load Customer\New Customer">
     <Properties>
       <Property>
@@ -1434,6 +1425,14 @@ where [refTable].[customer_id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Load Customer\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Load Customer\Update Customer">
     <Properties>
       <Property>
@@ -1443,6 +1442,29 @@ where [refTable].[customer_id] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Customer\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCustomer]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

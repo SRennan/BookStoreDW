@@ -1,0 +1,830 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1600,
+  "model": {
+    "culture": "es-MX",
+    "dataSources": [
+      {
+        "type": "structured",
+        "name": "SQL/RENAN-LAPTOP;BookStore_DW",
+        "connectionDetails": {
+          "protocol": "tds",
+          "address": {
+            "server": "RENAN-LAPTOP",
+            "database": "BookStore_DW"
+          },
+          "authentication": null,
+          "query": null
+        },
+        "credential": {
+          "AuthenticationKind": "UsernamePassword",
+          "kind": "SQL",
+          "path": "renan-laptop;BookStore_DW",
+          "Username": "sa",
+          "EncryptConnection": false
+        }
+      }
+    ],
+    "tables": [
+      {
+        "name": "Orders",
+        "columns": [
+          {
+            "name": "line_id",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "line_id"
+          },
+          {
+            "name": "order_id",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "order_id"
+          },
+          {
+            "name": "AddressSK",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "AddressSK"
+          },
+          {
+            "name": "BookSK",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "BookSK"
+          },
+          {
+            "name": "CustomerSK",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "CustomerSK"
+          },
+          {
+            "name": "MethodSK",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "MethodSK"
+          },
+          {
+            "name": "StatusSK",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "StatusSK"
+          },
+          {
+            "name": "Order_dateKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Order_dateKey"
+          },
+          {
+            "name": "order_date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "order_date"
+          },
+          {
+            "name": "quantity",
+            "dataType": "int64",
+            "sourceColumn": "quantity"
+          },
+          {
+            "name": "price",
+            "dataType": "double",
+            "sourceColumn": "price"
+          },
+          {
+            "name": "method_name",
+            "dataType": "string",
+            "sourceColumn": "method_name"
+          },
+          {
+            "name": "cost",
+            "dataType": "double",
+            "sourceColumn": "cost"
+          },
+          {
+            "type": "calculated",
+            "name": "GrossSales",
+            "dataType": "double",
+            "isDataTypeInferred": true,
+            "expression": "[quantity]*[price]"
+          },
+          {
+            "type": "calculated",
+            "name": "NetSales",
+            "dataType": "double",
+            "isDataTypeInferred": true,
+            "expression": "[GrossSales]+[cost]"
+          },
+          {
+            "type": "calculated",
+            "name": "Salestype",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "IF([price]==0,\"Free Sale\",(IF([price]>10,\"Big Sale\",\"Normal sale\")))"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/RENAN-LAPTOP;BookStore_DW\",",
+                "    dbo_FactOrders = Source{[Schema=\"dbo\",Item=\"FactOrders\"]}[Data]",
+                "in",
+                "    dbo_FactOrders"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "TotalBigSalesQuantity",
+            "expression": "CALCULATE(SUM(Orders[quantity]),Orders[Salestype]=\"Big sale\")"
+          },
+          {
+            "name": "TotalNormalSalesQuantity",
+            "expression": "CALCULATE(SUM(Orders[quantity]),Orders[Salestype]=\"Normal sale\")"
+          },
+          {
+            "name": "TotalFreeSalesQuantity",
+            "expression": "CALCULATE(SUM(Orders[quantity]),Orders[Salestype]=\"Free sale\")"
+          },
+          {
+            "name": "TotalSendStandardSalesQuantity",
+            "expression": "CALCULATE(SUM(Orders[quantity]),Orders[method_name]=\"Standard\")"
+          },
+          {
+            "name": "TotalSendInternationalSalesQuantity",
+            "expression": "CALCULATE(SUM(Orders[quantity]),Orders[method_name]=\"International\")"
+          },
+          {
+            "name": "TotalSendPrioritySalesQuantity",
+            "expression": "CALCULATE(SUM(Orders[quantity]),Orders[method_name]=\"Priority\")"
+          },
+          {
+            "name": "TotalSendExapressSalesQuantity",
+            "expression": "CALCULATE(SUM(Orders[quantity]),Orders[method_name]=\"Express\")"
+          },
+          {
+            "name": "TotalPrice",
+            "expression": "SUM(Orders[price])"
+          },
+          {
+            "name": "TotalBigSalesPrice",
+            "expression": "CALCULATE(SUM(Orders[price]),Orders[Salestype]=\"Big sale\")"
+          },
+          {
+            "name": "TotalNormalSalesPrice",
+            "expression": "CALCULATE(SUM(Orders[price]),Orders[Salestype]=\"Normal sale\")"
+          },
+          {
+            "name": "TotalFreeSalesPrice",
+            "expression": "CALCULATE(SUM(Orders[price]),Orders[Salestype]=\"Free sale\")"
+          },
+          {
+            "name": "TotalSendCost",
+            "expression": "SUM(Orders[cost])"
+          },
+          {
+            "name": "TotalBigSalesSendPrice",
+            "expression": "CALCULATE(SUM(Orders[cost]),Orders[Salestype]=\"Big sale\")"
+          },
+          {
+            "name": "TotalNormalSalesSendPrice",
+            "expression": "CALCULATE(SUM(Orders[cost]),Orders[Salestype]=\"Normal sale\")"
+          },
+          {
+            "name": "TotalFreeSalesSendPrice",
+            "expression": "CALCULATE(SUM(Orders[cost]),Orders[Salestype]=\"Free sale\")"
+          },
+          {
+            "name": "TotalQuantity",
+            "expression": "SUM(Orders[quantity])"
+          },
+          {
+            "name": "CountryRankingOrder",
+            "expression": [
+              " VAR CantArticulos = [ItemOrder]",
+              "RETURN",
+              "SWITCH(",
+              "    TRUE(),",
+              "    CantArticulos <=50, \"Orden pequeña\",",
+              "    CantArticulos <= 100, \"Orden mediana\",",
+              "    \"Orden grande\"",
+              ")"
+            ]
+          },
+          {
+            "name": "ItemOrder",
+            "expression": " COUNTROWS(Orders)"
+          },
+          {
+            "name": "CustomerRankingOrder",
+            "expression": [
+              " VAR CantArticulos = [ItemOrder]",
+              "RETURN",
+              "SWITCH(",
+              "    TRUE(),",
+              "    CantArticulos <=5, \"Orden pequeña\",",
+              "    CantArticulos <= 10, \"Orden mediana\",",
+              "    \"Orden grande\"",
+              ")"
+            ]
+          },
+          {
+            "name": "NumberOrders",
+            "expression": [
+              "",
+              "DISTINCTCOUNT(Orders[order_id])"
+            ]
+          },
+          {
+            "name": "TotalSend",
+            "expression": "sum(Orders[cost])"
+          },
+          {
+            "name": "CostSendOrder",
+            "expression": "MAX(Orders[cost])"
+          },
+          {
+            "name": "CostTotalOrder",
+            "expression": "[TotalPrice] + [CostSendOrder]"
+          },
+          {
+            "name": "TotalBigSalesSend",
+            "expression": "CALCULATE(MAX(Orders[cost]),Orders[Salestype]=\"Big sale\")"
+          },
+          {
+            "name": "TotalNormalSalesSend",
+            "expression": "CALCULATE(MAX(Orders[cost]),Orders[Salestype]=\"Normal sale\")"
+          },
+          {
+            "name": "TotalFreeSalesSend",
+            "expression": "CALCULATE(MAX(Orders[cost]),Orders[Salestype]=\"Free sale\")"
+          }
+        ]
+      },
+      {
+        "name": "Address",
+        "columns": [
+          {
+            "name": "AddressSK",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "AddressSK"
+          },
+          {
+            "name": "address_id",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "address_id"
+          },
+          {
+            "name": "street_name",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "street_name"
+          },
+          {
+            "name": "street_number",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "street_number"
+          },
+          {
+            "name": "city",
+            "dataType": "string",
+            "sourceColumn": "city"
+          },
+          {
+            "name": "country_name",
+            "dataType": "string",
+            "sourceColumn": "country_name"
+          },
+          {
+            "type": "calculated",
+            "name": "Address",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "CONCATENATE(CONCATENATE(CONCATENATE(CONCATENATE([city],\": \"),[street_name]),\" \"),[street_number])"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/RENAN-LAPTOP;BookStore_DW\",",
+                "    dbo_DimAddress = Source{[Schema=\"dbo\",Item=\"DimAddress\"]}[Data]",
+                "in",
+                "    dbo_DimAddress"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Book",
+        "columns": [
+          {
+            "name": "BookSK",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "BookSK"
+          },
+          {
+            "name": "book_id",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "book_id"
+          },
+          {
+            "name": "title",
+            "dataType": "string",
+            "sourceColumn": "title"
+          },
+          {
+            "name": "isbn13",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "isbn13"
+          },
+          {
+            "name": "language_code",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "language_code"
+          },
+          {
+            "name": "language_name",
+            "dataType": "string",
+            "sourceColumn": "language_name"
+          },
+          {
+            "name": "num_pages",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "num_pages"
+          },
+          {
+            "name": "publication_date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "publication_date"
+          },
+          {
+            "name": "publisher_name",
+            "dataType": "string",
+            "sourceColumn": "publisher_name"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/RENAN-LAPTOP;BookStore_DW\",",
+                "    dbo_DimBook = Source{[Schema=\"dbo\",Item=\"DimBook\"]}[Data]",
+                "in",
+                "    dbo_DimBook"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Customer",
+        "columns": [
+          {
+            "name": "CustomerSK",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "CustomerSK"
+          },
+          {
+            "name": "customer_id",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "customer_id"
+          },
+          {
+            "name": "first_name",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "first_name"
+          },
+          {
+            "name": "last_name",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "last_name"
+          },
+          {
+            "name": "email",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "email"
+          },
+          {
+            "name": "street_name",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "street_name"
+          },
+          {
+            "name": "street_number",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "street_number"
+          },
+          {
+            "name": "city",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "city"
+          },
+          {
+            "name": "address_status",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "address_status"
+          },
+          {
+            "name": "country_name",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "country_name"
+          },
+          {
+            "type": "calculated",
+            "name": "Customer",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "CONCATENATE(CONCATENATE([first_name],\" \"),[last_name])"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/RENAN-LAPTOP;BookStore_DW\",",
+                "    dbo_DimCustomer = Source{[Schema=\"dbo\",Item=\"DimCustomer\"]}[Data]",
+                "in",
+                "    dbo_DimCustomer"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Date",
+        "columns": [
+          {
+            "name": "DateKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DateKey"
+          },
+          {
+            "name": "FullDate",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "FullDate"
+          },
+          {
+            "name": "DayNumberOfWeek",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DayNumberOfWeek"
+          },
+          {
+            "name": "DayNameOfWeek",
+            "dataType": "string",
+            "isHidden": true,
+            "sourceColumn": "DayNameOfWeek"
+          },
+          {
+            "name": "DayNumberOfMonth",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DayNumberOfMonth"
+          },
+          {
+            "name": "DayNumberOfYear",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DayNumberOfYear"
+          },
+          {
+            "name": "WeekNumberOfYear",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "WeekNumberOfYear"
+          },
+          {
+            "name": "MonthName",
+            "dataType": "string",
+            "sourceColumn": "MonthName"
+          },
+          {
+            "name": "MonthNumberOfYear",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "MonthNumberOfYear"
+          },
+          {
+            "name": "CalendarQuarter",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "CalendarQuarter"
+          },
+          {
+            "name": "CalendarYear",
+            "dataType": "int64",
+            "sourceColumn": "CalendarYear"
+          },
+          {
+            "name": "CalendarSemester",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "CalendarSemester"
+          },
+          {
+            "type": "calculated",
+            "name": "Year - Month",
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "expression": "CONCATENATE(CONCATENATE([CalendarYear],\" - \"),[MonthName])"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/RENAN-LAPTOP;BookStore_DW\",",
+                "    dbo_DimDate = Source{[Schema=\"dbo\",Item=\"DimDate\"]}[Data]",
+                "in",
+                "    dbo_DimDate"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "ShippingMethod",
+        "columns": [
+          {
+            "name": "MethodSK",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "MethodSK"
+          },
+          {
+            "name": "method_id",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "method_id"
+          },
+          {
+            "name": "method_name",
+            "dataType": "string",
+            "sourceColumn": "method_name"
+          },
+          {
+            "name": "cost",
+            "dataType": "double",
+            "isHidden": true,
+            "sourceColumn": "cost"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/RENAN-LAPTOP;BookStore_DW\",",
+                "    dbo_DimShippingMethod = Source{[Schema=\"dbo\",Item=\"DimShippingMethod\"]}[Data]",
+                "in",
+                "    dbo_DimShippingMethod"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Status",
+        "columns": [
+          {
+            "name": "StatusSK",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "StatusSK"
+          },
+          {
+            "name": "order_id",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "order_id"
+          },
+          {
+            "name": "status_value",
+            "dataType": "string",
+            "sourceColumn": "status_value"
+          },
+          {
+            "name": "Status_dateKey",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "Status_dateKey"
+          },
+          {
+            "name": "status_date",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "status_date"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Partition",
+            "dataView": "full",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = #\"SQL/RENAN-LAPTOP;BookStore_DW\",",
+                "    dbo_DimStatus = Source{[Schema=\"dbo\",Item=\"DimStatus\"]}[Data]",
+                "in",
+                "    dbo_DimStatus"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "2503071d-d978-4554-9d39-65e6978b645c",
+        "fromTable": "Orders",
+        "fromColumn": "AddressSK",
+        "toTable": "Address",
+        "toColumn": "AddressSK"
+      },
+      {
+        "name": "e75237a8-417f-4c63-ab4c-0eebe2f36616",
+        "fromTable": "Orders",
+        "fromColumn": "BookSK",
+        "toTable": "Book",
+        "toColumn": "BookSK"
+      },
+      {
+        "name": "6dc1d223-7ac9-4e42-9b65-93659583d0fe",
+        "fromTable": "Orders",
+        "fromColumn": "CustomerSK",
+        "toTable": "Customer",
+        "toColumn": "CustomerSK"
+      },
+      {
+        "name": "b4255858-e32e-4861-84d5-42a5e5e06178",
+        "fromTable": "Orders",
+        "fromColumn": "Order_dateKey",
+        "toTable": "Date",
+        "toColumn": "DateKey"
+      },
+      {
+        "name": "e8155e50-9567-4abc-b4fb-dae0f3444e80",
+        "fromTable": "Orders",
+        "fromColumn": "MethodSK",
+        "toTable": "ShippingMethod",
+        "toColumn": "MethodSK"
+      },
+      {
+        "name": "dc87a320-2eb6-47b1-bee1-7374c8156b8e",
+        "fromTable": "Orders",
+        "fromColumn": "StatusSK",
+        "toTable": "Status",
+        "toColumn": "StatusSK"
+      }
+    ],
+    "perspectives": [
+      {
+        "name": "HR",
+        "tables": [
+          {
+            "name": "Address",
+            "columns": [
+              {
+                "name": "city"
+              },
+              {
+                "name": "country_name"
+              }
+            ]
+          },
+          {
+            "name": "Orders",
+            "columns": [
+              {
+                "name": "price"
+              },
+              {
+                "name": "quantity"
+              },
+              {
+                "name": "Salestype"
+              }
+            ],
+            "measures": [
+              {
+                "name": "CostSendOrder"
+              },
+              {
+                "name": "CostTotalOrder"
+              },
+              {
+                "name": "CountryRankingOrder"
+              },
+              {
+                "name": "ItemOrder"
+              },
+              {
+                "name": "NumberOrders"
+              },
+              {
+                "name": "TotalBigSalesPrice"
+              },
+              {
+                "name": "TotalBigSalesQuantity"
+              },
+              {
+                "name": "TotalBigSalesSend"
+              },
+              {
+                "name": "TotalBigSalesSendPrice"
+              },
+              {
+                "name": "TotalFreeSalesPrice"
+              },
+              {
+                "name": "TotalFreeSalesQuantity"
+              },
+              {
+                "name": "TotalFreeSalesSend"
+              },
+              {
+                "name": "TotalFreeSalesSendPrice"
+              },
+              {
+                "name": "TotalNormalSalesPrice"
+              },
+              {
+                "name": "TotalNormalSalesQuantity"
+              },
+              {
+                "name": "TotalNormalSalesSend"
+              },
+              {
+                "name": "TotalNormalSalesSendPrice"
+              },
+              {
+                "name": "TotalPrice"
+              },
+              {
+                "name": "TotalQuantity"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "700"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}

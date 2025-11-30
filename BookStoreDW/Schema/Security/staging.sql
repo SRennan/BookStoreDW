@@ -1,2 +1,4 @@
 ﻿CREATE SCHEMA [staging]
 GO
+CREATE SCHEMA [bridge]
+GO

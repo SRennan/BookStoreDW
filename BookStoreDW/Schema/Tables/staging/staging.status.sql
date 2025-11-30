@@ -1,5 +1,7 @@
-﻿CREATE TABLE [staging].[status]
-(
-	[StatusSK] INT NOT NULL ,
-	[status_value] [varchar](20) NULL
+﻿CREATE TABLE [staging].[status](
+	[StatusSK] [int] NOT NULL,
+	[status_value] [varchar](20) NULL,
+	[Status_dateKey] [int] NULL,
+	[status_date] [datetime] NULL
+
 )
